@@ -19,5 +19,5 @@ test('test', async ({ page }) => {
   await page.getByRole('heading', { name: 'Track a Parcel' }).getByRole('link').click();
   await page.getByRole('heading', { name: 'TRACK A PARCEL' }).click();
   await page.getByRole('link', { name: 'Team Global Express' }).click();
-  await page.getByRole('link', { name: 'Team Global Express' }).click();
+ 
 });
