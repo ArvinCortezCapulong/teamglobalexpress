@@ -1,4 +1,4 @@
-import { Page, Locator,expect} from '@playwright/test'
+import { Page, Locator} from '@playwright/test'
 
 export default class Homepage {
     page : Page
@@ -10,6 +10,7 @@ export default class Homepage {
     }
 
     async navigateToHomePage() {
+        // await this.page.goto(`${process.env.BASE_URL}`)
         await this.page.goto('/')
     }
     async checkTeamGlobalExpresLogo() {

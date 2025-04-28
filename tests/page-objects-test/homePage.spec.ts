@@ -1,5 +1,5 @@
 import {test,  expect} from '@playwright/test'
-import Homepage from '../../src/homepage'
+import Homepage from '../../src/page-objects/homepage'
 
 test.describe('Team GlobalExpress Auto Test', ()=>{
     test('Home Page Test', async({page}) =>{
