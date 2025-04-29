@@ -8,5 +8,6 @@ test.describe('Team GlobalExpress Auto Test', ()=>{
         await expect(page).toHaveURL('https://teamglobalexp.com/')
         await homePage.checkTeamGlobalExpresLogo()
         await homePage.checkAndClickBusinessSolutionsMainNav()
+        await homePage.checkAndClickeCommerceSolutionsMainNav()
     })
 })

@@ -42,4 +42,19 @@ export default class Homepage {
         await this.page.waitForLoadState('domcontentloaded');
         await this.teamGlobalExpresLogo.click()
     }
+
+    async checkAndClickeCommerceSolutionsMainNav() {
+        await this.eCommerceSolutionsMainNav.isVisible()
+        await expect(this.eCommerceSolutionsMainNav).toHaveText('Business Solutions')
+        await this.eCommerceSolutionsMainNav.click()
+
+        // const page1Promise = this.page.waitForEvent('popup');
+        // await this.businessSolutionsMainNav.click()
+        // const page1 = await page1Promise;
+        // await page1.waitForLoadState('domcontentloaded');
+        await expect(this.page).toHaveURL('https://teamglobalexp.com/ecare-ecommerce-solutions')
+        // await (page1).close();
+        await this.page.waitForLoadState('domcontentloaded');
+        await this.teamGlobalExpresLogo.click()
+    }
 }
