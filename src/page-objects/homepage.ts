@@ -7,15 +7,17 @@ export default class Homepage {
     eCommerceSolutionsMainNav: Locator
     aboutUsMainNav: Locator
     trackMainNav: Locator
+    searchMainNav: Locator
 
     constructor( page: Page) {
         this.page = page
         // this.teamGlobalExpresLogo = page.getByRole('link', { name: 'Team Global Express' })
         this.teamGlobalExpresLogo = page.locator('a img[alt="Team Global Express"]')
         this.businessSolutionsMainNav = page.getByRole('link', { name: 'Business Solutions', exact: true })
-        this.eCommerceSolutionsMainNav = page.getByRole('link', { name: 'Business Solutions', exact: true })
+        this.eCommerceSolutionsMainNav = page.getByRole('link', { name: 'eCommerce Solutions', exact: true })
         this.aboutUsMainNav = page.locator('#navigationCollapseCustom').getByRole('link', { name: 'About Us' })
         this.trackMainNav = page.getByRole('link', { name: 'Track', exact: true })
+        // this.searchMainNav = page.
     }
 
     async navigateToHomePage() {
@@ -37,39 +39,41 @@ export default class Homepage {
         // await this.businessSolutionsMainNav.click()
         // const page1 = await page1Promise;
         // await page1.waitForLoadState('domcontentloaded');
-        await expect(this.page).toHaveURL('https://www.thedrum.com/news/2024/11/11/ad-the-day-starbucks-offers-some-holiday-rush-reprieve-mixed-media-spot')
         // await (page1).close();
         await this.page.waitForLoadState('domcontentloaded');
+        await expect(this.page).toHaveURL('https://teamglobalexp.com/business-solutions')
+        
         await this.teamGlobalExpresLogo.click()
     }
 
     async checkAndClickeCommerceSolutionsMainNav() {
         await this.eCommerceSolutionsMainNav.isVisible()
-        await expect(this.eCommerceSolutionsMainNav).toHaveText('Business Solutions')
+        await expect(this.eCommerceSolutionsMainNav).toHaveText('eCommerce Solutions')
         await this.eCommerceSolutionsMainNav.click()
-
-        // const page1Promise = this.page.waitForEvent('popup');
-        // await this.businessSolutionsMainNav.click()
-        // const page1 = await page1Promise;
-        // await page1.waitForLoadState('domcontentloaded');
+        await this.page.waitForLoadState('domcontentloaded');
         await expect(this.page).toHaveURL('https://teamglobalexp.com/ecare-ecommerce-solutions')
         // await (page1).close();
-        await this.page.waitForLoadState('domcontentloaded');
+       
         await this.teamGlobalExpresLogo.click()
     }
 
     async checkAndClickAboutUsMainNav() {
         await this.aboutUsMainNav.isVisible()
-        await expect(this.aboutUsMainNav).toHaveText('Business Solutions')
+        await expect(this.aboutUsMainNav).toHaveText('About Us')
         await this.aboutUsMainNav.click()
-
-        // const page1Promise = this.page.waitForEvent('popup');
-        // await this.businessSolutionsMainNav.click()
-        // const page1 = await page1Promise;
-        // await page1.waitForLoadState('domcontentloaded');
+        await this.page.waitForLoadState('domcontentloaded');
         await expect(this.page).toHaveURL('https://teamglobalexp.com/about-us')
         // await (page1).close();
+        await this.teamGlobalExpresLogo.click()
+    }
+
+    async checkAndClickTrackMainNav() {
+        await this.trackMainNav.isVisible()
+        await expect(this.trackMainNav).toHaveText('Track')
+        await this.trackMainNav.click()
         await this.page.waitForLoadState('domcontentloaded');
+        await expect(this.page).toHaveURL('https://teamglobalexp.com/myparcel')
+        // await (page1).close();
         await this.teamGlobalExpresLogo.click()
     }
 }
