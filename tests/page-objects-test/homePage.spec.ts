@@ -9,5 +9,6 @@ test.describe('Team GlobalExpress Auto Test', ()=>{
         await homePage.checkTeamGlobalExpresLogo()
         await homePage.checkAndClickBusinessSolutionsMainNav()
         await homePage.checkAndClickeCommerceSolutionsMainNav()
+        await homePage.checkAndClickAboutUsMainNav()
     })
 })

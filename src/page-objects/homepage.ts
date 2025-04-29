@@ -57,4 +57,19 @@ export default class Homepage {
         await this.page.waitForLoadState('domcontentloaded');
         await this.teamGlobalExpresLogo.click()
     }
+
+    async checkAndClickAboutUsMainNav() {
+        await this.aboutUsMainNav.isVisible()
+        await expect(this.aboutUsMainNav).toHaveText('Business Solutions')
+        await this.aboutUsMainNav.click()
+
+        // const page1Promise = this.page.waitForEvent('popup');
+        // await this.businessSolutionsMainNav.click()
+        // const page1 = await page1Promise;
+        // await page1.waitForLoadState('domcontentloaded');
+        await expect(this.page).toHaveURL('https://teamglobalexp.com/about-us')
+        // await (page1).close();
+        await this.page.waitForLoadState('domcontentloaded');
+        await this.teamGlobalExpresLogo.click()
+    }
 }
