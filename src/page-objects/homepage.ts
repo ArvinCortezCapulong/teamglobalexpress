@@ -76,4 +76,18 @@ export default class Homepage {
         // await (page1).close();
         await this.teamGlobalExpresLogo.click()
     }
+
+    async checkAndClickTrackMainNavWithPause() {
+        await this.trackMainNav.isVisible()
+        await expect(this.trackMainNav).toHaveText('Track')
+        await this.trackMainNav.click()
+        await this.page.waitForLoadState('domcontentloaded');
+        await expect(this.page).toHaveURL('https://teamglobalexp.com/myparcel')
+        // await (page1).close();
+        const delay = (ms: number) =>
+            new Promise((resolve) => setTimeout(resolve, ms));
+          await delay(3000);
+
+        await this.teamGlobalExpresLogo.click()
+    }
 }
