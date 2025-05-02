@@ -38,7 +38,7 @@ export default class HomePage {
         await expect(this.teamGlobalExpresLogo).toHaveAttribute('alt', 'Team Global Express');
     }
 
-    async checkAndClickBusinessSolutionsMainNav() {
+    async checkAndClickBusinessSolutionsMainNavReturn() {
         await this.businessSolutionsMainNav.isVisible()
         await expect(this.businessSolutionsMainNav).toHaveText('Business Solutions')
         await this.businessSolutionsMainNav.click()
@@ -54,14 +54,41 @@ export default class HomePage {
         await this.teamGlobalExpresLogo.click()
     }
 
+    async checkAndClickBusinessSolutionsMainNav() {
+        await this.businessSolutionsMainNav.isVisible()
+        await expect(this.businessSolutionsMainNav).toHaveText('Business Solutions')
+        await this.businessSolutionsMainNav.click()
+        await this.page.waitForLoadState('domcontentloaded');
+        await expect(this.page).toHaveURL('https://teamglobalexp.com/business-solutions')
+    }
+
+    async checkAndClickeCommerceSolutionsMainNavReturn() {
+        await this.eCommerceSolutionsMainNav.isVisible()
+        await expect(this.eCommerceSolutionsMainNav).toHaveText('eCommerce Solutions')
+        await this.eCommerceSolutionsMainNav.click()
+        await this.page.waitForLoadState('domcontentloaded');
+        await expect(this.page).toHaveURL('https://teamglobalexp.com/ecare-ecommerce-solutions')
+        // await (page1).close();     
+        await this.teamGlobalExpresLogo.click()
+    }
+
     async checkAndClickeCommerceSolutionsMainNav() {
         await this.eCommerceSolutionsMainNav.isVisible()
         await expect(this.eCommerceSolutionsMainNav).toHaveText('eCommerce Solutions')
         await this.eCommerceSolutionsMainNav.click()
         await this.page.waitForLoadState('domcontentloaded');
         await expect(this.page).toHaveURL('https://teamglobalexp.com/ecare-ecommerce-solutions')
+        // await (page1).close(); 
+        // await this.teamGlobalExpresLogo.click()
+    }
+
+    async checkAndClickAboutUsMainNavReturn() {
+        await this.aboutUsMainNav.isVisible()
+        await expect(this.aboutUsMainNav).toHaveText('About Us')
+        await this.aboutUsMainNav.click()
+        await this.page.waitForLoadState('domcontentloaded');
+        await expect(this.page).toHaveURL('https://teamglobalexp.com/about-us')
         // await (page1).close();
-       
         await this.teamGlobalExpresLogo.click()
     }
 
@@ -72,7 +99,7 @@ export default class HomePage {
         await this.page.waitForLoadState('domcontentloaded');
         await expect(this.page).toHaveURL('https://teamglobalexp.com/about-us')
         // await (page1).close();
-        await this.teamGlobalExpresLogo.click()
+        // await this.teamGlobalExpresLogo.click()
     }
 
     async checkAndClickTrackMainNav() {
@@ -82,6 +109,20 @@ export default class HomePage {
         await this.page.waitForLoadState('domcontentloaded');
         await expect(this.page).toHaveURL('https://teamglobalexp.com/myparcel')
         // await (page1).close();
+        await this.teamGlobalExpresLogo.click()
+    }
+
+    async checkAndClickTrackMainNavWithPauseReturn() {
+        await this.trackMainNav.isVisible()
+        await expect(this.trackMainNav).toHaveText('Track')
+        await this.trackMainNav.click()
+        await this.page.waitForLoadState('domcontentloaded');
+        await expect(this.page).toHaveURL('https://teamglobalexp.com/myparcel')
+        // await (page1).close();
+        const delay = (ms: number) =>
+            new Promise((resolve) => setTimeout(resolve, ms));
+          await delay(3000);
+
         await this.teamGlobalExpresLogo.click()
     }
 
@@ -96,6 +137,6 @@ export default class HomePage {
             new Promise((resolve) => setTimeout(resolve, ms));
           await delay(3000);
 
-        await this.teamGlobalExpresLogo.click()
+        // await this.teamGlobalExpresLogo.click()
     }
 }

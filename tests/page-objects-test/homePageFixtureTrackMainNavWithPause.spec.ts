@@ -13,7 +13,7 @@ test.describe('Team GlobalExpress Auto Test', () => {
 
     test('Home Page Test1', async({homePage}) =>{
         await homePage.checkTeamGlobalExpresLogo()
-        await homePage.checkAndClickBusinessSolutionsMainNav()
+        await homePage.checkAndClickBusinessSolutionsMainNavReturn()
     //     await homePage.checkAndClickeCommerceSolutionsMainNav()
     //     await homePage.checkAndClickAboutUsMainNav()
     //     await homePage.checkAndClickTrackMainNav()
@@ -21,11 +21,11 @@ test.describe('Team GlobalExpress Auto Test', () => {
 
     test('Home Page Test2', async({homePage}) =>{
         await homePage.checkTeamGlobalExpresLogo()
-        await homePage.checkAndClickeCommerceSolutionsMainNav()   
+        await homePage.checkAndClickeCommerceSolutionsMainNavReturn()   
     })
     test('Home Page Test3', async({ homePage}) =>{
         await homePage.checkTeamGlobalExpresLogo()
-        await homePage.checkAndClickAboutUsMainNav()    
+        await homePage.checkAndClickAboutUsMainNavReturn()    
     })
     test('Home Page Test4', async({homePage}) =>{
         await homePage.checkTeamGlobalExpresLogo()
