@@ -1,6 +1,6 @@
 import { Page, Locator,expect} from '@playwright/test'
 
-export default class Homepage {
+export default class HomePage {
     page : Page
     teamGlobalExpresLogo: Locator
     businessSolutionsMainNav: Locator
@@ -23,6 +23,14 @@ export default class Homepage {
     async navigateToHomePage() {
         // await this.page.goto(`${process.env.BASE_URL}`)
         await this.page.goto('/')
+    }
+
+    async getTitle(): Promise<string> {
+        return this.page.title();
+    }
+
+    async getUrl(): Promise<string> {
+        return this.page.url();
     }
     async checkTeamGlobalExpresLogo() {
         await this.teamGlobalExpresLogo.isVisible()

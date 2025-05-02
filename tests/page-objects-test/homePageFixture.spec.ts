@@ -11,7 +11,7 @@ test.describe('Team GlobalExpress Auto Test', () => {
         await expect(page).toHaveURL('https://teamglobalexp.com/')
     })
 
-    test('Home Page Test1', async({homePage}) =>{
+    test('Home Page Test Business Solutions', async({homePage}) =>{
         await homePage.checkTeamGlobalExpresLogo()
         await homePage.checkAndClickBusinessSolutionsMainNav()
     //     await homePage.checkAndClickeCommerceSolutionsMainNav()
@@ -19,15 +19,15 @@ test.describe('Team GlobalExpress Auto Test', () => {
     //     await homePage.checkAndClickTrackMainNav()
     })
 
-    test('Home Page Test2', async({homePage}) =>{
+    test('Home Page Test eCommerce Solutions', async({homePage}) =>{
         await homePage.checkTeamGlobalExpresLogo()
         await homePage.checkAndClickeCommerceSolutionsMainNav()   
     })
-    test('Home Page Test3', async({ homePage}) =>{
+    test('Home Page Test About Us', async({ homePage}) =>{
         await homePage.checkTeamGlobalExpresLogo()
         await homePage.checkAndClickAboutUsMainNav()    
     })
-    test('Home Page Test4', async({homePage}) =>{
+    test('Home Page Test Track', async({homePage}) =>{
         await homePage.checkTeamGlobalExpresLogo()
         await homePage.checkAndClickTrackMainNav()
     })
