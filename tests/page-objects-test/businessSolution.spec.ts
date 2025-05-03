@@ -15,8 +15,14 @@ test.describe('Business Solution Page', () => {
         await homePage.checkTeamGlobalExpresLogo()
         await homePage.checkAndClickBusinessSolutionsMainNav()
         await expect(page).toHaveURL('https://teamglobalexp.com/business-solutions')
-        await businessSol.checkBusinessSolutionsHeroImage()
-        
+        await businessSol.checkBusinessSolutionsHeroImage()   
+
+    }) 
+
+    test('Navigate to Business Sulotions page via .env', async ({page, homePage, businessSol}) => {
+        await page.goto(`${process.env.BASE_URL}/business-solutions`)
+        await expect(page).toHaveURL('https://teamglobalexp.com/business-solutions')
+        await businessSol.checkBusinessSolutionsHeroImage()   
 
     }) 
 
