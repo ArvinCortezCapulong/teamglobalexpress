@@ -17,7 +17,7 @@ export default class HomePage {
         this.eCommerceSolutionsMainNav = page.getByRole('link', { name: 'eCommerce Solutions', exact: true })
         this.aboutUsMainNav = page.locator('#navigationCollapseCustom').getByRole('link', { name: 'About Us' })
         this.trackMainNav = page.getByRole('link', { name: 'Track', exact: true })
-        // this.searchMainNav = page.
+        this.searchMainNav = page.getByRole('link').filter({ hasText: /^$/ })
     }
 
     async navigateToHomePage() {
@@ -136,7 +136,14 @@ export default class HomePage {
         const delay = (ms: number) =>
             new Promise((resolve) => setTimeout(resolve, ms));
           await delay(3000);
-
         // await this.teamGlobalExpresLogo.click()
+    }
+
+    async checkAndClickSearchIcon() {
+        await this.searchMainNav.isVisible()
+        await this.searchMainNav.click()
+        await this.page.waitForLoadState('domcontentloaded');
+        await expect(this.page).toHaveURL('https://teamglobalexp.com/search')
+
     }
 }

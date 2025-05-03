@@ -31,4 +31,9 @@ test.describe('Team GlobalExpress Auto Test', () => {
         await homePage.checkTeamGlobalExpresLogo()
         await homePage.checkAndClickTrackMainNav()
     })
+
+    test('Home Page Test Search Icon', async({homePage}) =>{
+        await homePage.checkTeamGlobalExpresLogo()
+        await homePage.checkAndClickSearchIcon()
+    })
 })
