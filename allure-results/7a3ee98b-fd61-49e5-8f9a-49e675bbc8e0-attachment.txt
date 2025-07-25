@@ -1,0 +1,41 @@
+retrying https://teamglobalexp.com due to error page.waitForLoadState: Timeout 10000ms exceeded.
+=========================== logs ===========================
+  "load" event fired
+============================================================
+    at /Users/arvin.capulong/Library/CloudStorage/OneDrive-OneWorkplace/Documents/teamglobalexpress/tests/page-objects-test/anotherHompageTestSolid.spec.ts:14:28 {
+  name: 'TimeoutError',
+  [Symbol(step)]: {
+    stepId: 'pw:api@9',
+    location: {
+      file: '/Users/arvin.capulong/Library/CloudStorage/OneDrive-OneWorkplace/Documents/teamglobalexpress/tests/page-objects-test/anotherHompageTestSolid.spec.ts',
+      line: 14,
+      column: 28
+    },
+    category: 'pw:api',
+    title: 'page.waitForLoadState',
+    apiName: 'page.waitForLoadState',
+    params: { info: [Object] },
+    boxedStack: undefined,
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [TestInfoImpl],
+      _stepId: 'pw:api@9'
+    },
+    complete: [Function: complete],
+    endWallTime: 1753393007364,
+    error: {
+      message: 'TimeoutError: page.waitForLoadState: Timeout 10000ms exceeded.\n' +
+        '=========================== logs ===========================\n' +
+        '  "load" event fired\n' +
+        '============================================================',
+      stack: 'TimeoutError: page.waitForLoadState: Timeout 10000ms exceeded.\n' +
+        '=========================== logs ===========================\n' +
+        '  "load" event fired\n' +
+        '============================================================\n' +
+        '    at /Users/arvin.capulong/Library/CloudStorage/OneDrive-OneWorkplace/Documents/teamglobalexpress/tests/page-objects-test/anotherHompageTestSolid.spec.ts:14:28',
+      cause: undefined
+    }
+  }
+}

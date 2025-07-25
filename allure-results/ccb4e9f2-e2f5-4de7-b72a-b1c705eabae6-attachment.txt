@@ -1,0 +1,78 @@
+retrying https://teamglobalexp.com due to error page.goto: Target page, context or browser has been closed
+Call log:
+  - navigating to "https://teamglobalexp.com/", waiting until "domcontentloaded"
+
+    at /Users/arvin.capulong/Library/CloudStorage/OneDrive-OneWorkplace/Documents/teamglobalexpress/tests/page-objects-test/anotherHompageTestSolid.spec.ts:10:28 {
+  [Symbol(step)]: {
+    stepId: 'pw:api@8',
+    location: {
+      file: '/Users/arvin.capulong/Library/CloudStorage/OneDrive-OneWorkplace/Documents/teamglobalexpress/tests/page-objects-test/anotherHompageTestSolid.spec.ts',
+      line: 10,
+      column: 28
+    },
+    category: 'pw:api',
+    title: 'page.goto(https://teamglobalexp.com)',
+    apiName: 'page.goto',
+    params: {
+      url: 'https://teamglobalexp.com',
+      waitUntil: 'domcontentloaded',
+      timeout: 15000
+    },
+    boxedStack: undefined,
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [TestInfoImpl],
+      _stepId: 'pw:api@8'
+    },
+    complete: [Function: complete],
+    endWallTime: 1753392924321,
+    error: {
+      message: 'Error: page.goto: Target page, context or browser has been closed\n' +
+        'Call log:\n' +
+        '\x1B[2m  - navigating to "https://teamglobalexp.com/", waiting until "domcontentloaded"\x1B[22m\n',
+      stack: 'Error: page.goto: Target page, context or browser has been closed\n' +
+        'Call log:\n' +
+        '\x1B[2m  - navigating to "https://teamglobalexp.com/", waiting until "domcontentloaded"\x1B[22m\n' +
+        '\n' +
+        '    at /Users/arvin.capulong/Library/CloudStorage/OneDrive-OneWorkplace/Documents/teamglobalexpress/tests/page-objects-test/anotherHompageTestSolid.spec.ts:10:28',
+      cause: undefined
+    }
+  }
+}
+retrying https://teamglobalexp.com due to error page.goto: Target page, context or browser has been closed
+    at /Users/arvin.capulong/Library/CloudStorage/OneDrive-OneWorkplace/Documents/teamglobalexpress/tests/page-objects-test/anotherHompageTestSolid.spec.ts:10:28 {
+  [Symbol(step)]: {
+    stepId: 'pw:api@9',
+    location: {
+      file: '/Users/arvin.capulong/Library/CloudStorage/OneDrive-OneWorkplace/Documents/teamglobalexpress/tests/page-objects-test/anotherHompageTestSolid.spec.ts',
+      line: 10,
+      column: 28
+    },
+    category: 'pw:api',
+    title: 'page.goto(https://teamglobalexp.com)',
+    apiName: 'page.goto',
+    params: {
+      url: 'https://teamglobalexp.com',
+      waitUntil: 'domcontentloaded',
+      timeout: 15000
+    },
+    boxedStack: undefined,
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [TestInfoImpl],
+      _stepId: 'pw:api@9'
+    },
+    complete: [Function: complete],
+    endWallTime: 1753392924325,
+    error: {
+      message: 'Error: page.goto: Target page, context or browser has been closed',
+      stack: 'Error: page.goto: Target page, context or browser has been closed\n' +
+        '    at /Users/arvin.capulong/Library/CloudStorage/OneDrive-OneWorkplace/Documents/teamglobalexpress/tests/page-objects-test/anotherHompageTestSolid.spec.ts:10:28',
+      cause: undefined
+    }
+  }
+}
