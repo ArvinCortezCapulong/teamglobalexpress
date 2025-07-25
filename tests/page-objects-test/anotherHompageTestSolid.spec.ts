@@ -11,7 +11,7 @@ test.describe( 'Homepage Test', () => {
                     waitUntil: 'domcontentloaded',
                     timeout: 15000}
                      )
-                // await page.waitForLoadState('networkidle',{
+                // await page.waitForLoadState('networkidle',{ this networkidle is not correct , load or body is right
                 await page.waitForLoadState('load',{
                     timeout: 10000})
                 break   
